@@ -1,55 +1,125 @@
 'use client'
-import React, { useEffect, useState } from 'react';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
-import man from '../assets/images/man-video.png';
+import pic1 from '../assets/images/pic1.png';
+import pic2 from '../assets/images/pic2.png';
+import pic3 from '../assets/images/pic3.png';
+import pic4 from '../assets/images/pic4.png';
+import pic5 from '../assets/images/pic5.png';
 
-const Story: React.FC = () => {
+import { useMediaQuery } from '@react-hook/media-query';
 
-  const [scrolling, setScrolling] = useState(false);
+const Explore: React.FC = () => {
+  const isSmallScreen = useMediaQuery('(max-width: 768px)'); // Define your breakpoint
+  const numberOfCardsToShow = isSmallScreen ? 1 : 4; // Number of cards to show initially
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
-    };
+  const [currentCard, setCurrentCard] = useState(0);
 
-    window.addEventListener('scroll', handleScroll);
+  const cards = [
+    {
+      image: pic1,
+      title: '5 tricks you should know about SEO',
+      date: 'September 18, 2023',
+      price: '5 minutes read',
+    },
+    {
+      image: pic2,
+      title: '5 tricks you should know about SEO',
+      date: 'September 18, 2023',
+      price: '5 minutes read',
+    },
+    {
+      image: pic5,
+      title: '5 tricks you should know about SEO',
+      date: 'September 18, 2023',
+      price: '5 minutes read',
+    },
+    {
+      image: pic2,
+      title: '5 tricks you should know about SEO',
+      date: 'September 18, 2023',
+      price: '5 minutes read',
+    },
+    {
+      image: pic5,
+      title: '5 tricks you should know about SEO',
+      date: 'September 18, 2023',
+      price: '5 minutes read',
+    },
+    {
+      image: pic1,
+      title: 'Cote d’Azur, France',
+      date: 'September 18, 2023',
+      price: '5 minutes read',
+    },
+    // Add more cards here
+  ];
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleNext = () => {
+    setCurrentCard((prevCard) => (prevCard + 1) % cards.length);
   };
-  
+
+  const handlePrev = () => {
+    setCurrentCard((prevCard) => (prevCard - 1 + cards.length) % cards.length);
+  };
 
   return (
-    <section id="about-us" className='story px-6 md:px-20 py-16 bg-[#F0F9FF]'>
-        <div className='block md:flex hero gap-2 md:gap-32'>
-            <div className='sm:w-1/2 mb-6 sm:mb-1'>
-                <p className='text-[#40B8D3] font-bold'>LEARNING HUB</p>
-                <p className='text-[#082630] sm:text-4xl text-2xl font-bold mt-2 mb-5'>Fostering an Enriching Environment for Acquiring Knowledge</p>
-                <p className='text-[#082630]'>
-                At Instig Labs, we believe that knowledge knows no bounds, and we're dedicated to fostering a vibrant community of brilliant minds. Our platform serves as a hub for individuals passionate about learning, networking, and investing in the future. Whether you're an aspiring ent
-                </p>
-                
-                <button onClick={() => scrollToSection('services')} className="text-[#40B8D3] mt-8 px-10 py-3 rounded-lg text-sm font-bold bg-[#082630]">Watch Our Podcasts</button>
-            </div>
-            <div className='sm:w-1/2'>
-                <Image src={man} alt="man"/>
-            </div>
+    <section id="explore" className="story px-10 py-20">
+      <div className="hero">
+        <div>
+        <div className="block md:flex px-20 mb-4 gap-2 md:gap-12">
+        <div className="w-full md:w-1/2">
+          <p className="text-[#40B8D3] font-bold">INSTIGLAB BLOG</p>
+          <p className="text-[#082630] sm:text-5xl text-4xl font-bold mt-2 mb-5">
+            Stay Connected
+          </p>
         </div>
+        <div className="w-full md:w-1/2">
+          <p className="text-[#082630] mt-1">
+            Stay updated with the latest industry insights, trends, and expert
+            opinions by exploring our blog.
+          </p>
+        </div>
+      </div>
+          <div className="relative mt-10">
+            <div className={`flex gap-6 hero ${isSmallScreen ? 'carousel' : ''}`}>
+              {cards.slice(currentCard, currentCard + numberOfCardsToShow).map((card, index) => (
+                <div key={index} className="mb-6 card relative">
+                  <Image src={card.image} alt={`place${index + 1}`} />
+                  <p className="mt-3 text-xl sm:text-2xl font-bold text-blue-950">{card.title}</p>
+                  <div className="flex gap-2 mt-3">
+                    
+                    <p className="text-blue-950 text-lg">{card.date}</p>
+                  </div>
+                  <div className="flex gap-2">
+                   
+                    <p className="text-[#40B8D3] text-lg">{card.price}</p>
+                  </div>
+                </div>
+              ))}
+             
+                <div className="carousel-controls absolute top-1/2 transform -translate-y-1/2 flex justify-between w-full">
+                  <button
+                    className="prev rounded-full border ml-3 text-white p-3 px-5 absolute top-1/2 left-1 sm:left-0 transform -translate-y-1/2"
+                    onClick={handlePrev}
+                  >
+                    ←
+                  </button>
+                  <button
+                    className="next rounded-full  border mr-6 text-white p-3 px-5 absolute top-1/2 right-1 sm:right-0 transform -translate-y-1/2"
+                    onClick={handleNext}
+                  >
+                    →
+                  </button>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
 
-export default Story;
+export default Explore;

@@ -33,19 +33,22 @@ const Header: React.FC = () => {
 
   return (
     <nav
-      className={`px-3 md:px-6 py-5 bg-white gap-5 sm:gap-96 flex shadow-sm nav  fixed w-full top-0 z-10`}
+      className={`px-3 md:px-6 py-5 bg-white gap-8 sm:gap-96 flex shadow-sm nav  fixed w-full top-0 z-10`}
     >
       <div className="flex items-center">
         <Image alt="logo" src={logo} onClick={() => scrollToSection('hero')} className="mr-20" />
-        <ul className="flex space-x-20 ml-36 inv text-sm font-bold text-[#082630]">
+        <ul className="flex space-x-20 ml-40 inv text-sm font-bold text-[#082630]">
           <li className="cursor-pointer hover:font-bold" onClick={() => scrollToSection('/')}>
-            Home
+            Events
           </li>
           <li className="cursor-pointer hover:font-bold" onClick={() => scrollToSection('testimonials')}>
-            About Us
+            Community
           </li>
           <li className="cursor-pointer hover:font-bold" onClick={() => scrollToSection('about-us')}>
-            Podcasts
+            Blog
+          </li>
+          <li className="cursor-pointer hover:font-bold" onClick={() => scrollToSection('about-us')}>
+            About Us
           </li>
         </ul>
       </div>

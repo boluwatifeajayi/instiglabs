@@ -14,7 +14,7 @@ const Testimonials: React.FC = () => {
     <section id="testimonials" className='px-6 md:px-20 mt-32 py-16 bg-[#082630]'>
       <div className='block md:flex mb-4 gap-2 md:gap-12'>
         <div className='w-full md:w-1/2'>
-          <p className='text-[#40B8D3] font-bold'>WHO WE ARE</p>
+          <p className='text-[#40B8D3] font-bold'>ABOUT INSTIG LABS</p>
           <p className='text-white sm:text-5xl text-4xl font-bold mt-2 mb-5'>
            Why InstigLabs
           </p>
