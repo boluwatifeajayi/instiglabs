@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import logo from '../assets/images/logo.svg';
+import Link from 'next/link';
 
 const Header: React.FC = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -36,17 +37,19 @@ const Header: React.FC = () => {
       className={`px-3 md:px-6 py-5 bg-white gap-8 sm:gap-96 flex shadow-sm nav  fixed w-full top-0 z-10`}
     >
       <div className="flex items-center">
-        <Image alt="logo" src={logo} onClick={() => scrollToSection('hero')} className="mr-20" />
+
+        <Link href="/"><Image alt="logo" src={logo}  className="mr-20" /></Link>
+        
         <ul className="flex space-x-20 ml-40 inv text-sm font-bold text-[#082630]">
           <li className="cursor-pointer hover:font-bold" onClick={() => scrollToSection('/')}>
             Events
           </li>
-          <li className="cursor-pointer hover:font-bold" onClick={() => scrollToSection('testimonials')}>
+          <Link href="/community" className="cursor-pointer hover:font-bold">
             Community
-          </li>
-          <li className="cursor-pointer hover:font-bold" onClick={() => scrollToSection('about-us')}>
+          </Link>
+          <Link className="cursor-pointer hover:font-bold" href="/blog">
             Blog
-          </li>
+          </Link>
           <li className="cursor-pointer hover:font-bold" onClick={() => scrollToSection('about-us')}>
             About Us
           </li>

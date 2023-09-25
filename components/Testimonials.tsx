@@ -11,8 +11,9 @@ const Testimonials: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
-    <section id="testimonials" className='px-6 md:px-20 mt-32 py-16 bg-[#082630]'>
-      <div className='block md:flex mb-4 gap-2 md:gap-12'>
+    <section id="testimonials" className='story mt-12 py-16 px-6 md:px-20 bg-[#082630]'>
+      <div>
+      <div className='container mx-auto block md:flex flex-col md:flex-row justify-between'>
         <div className='w-full md:w-1/2'>
           <p className='text-[#40B8D3] font-bold'>ABOUT INSTIG LABS</p>
           <p className='text-white sm:text-5xl text-4xl font-bold mt-2 mb-5'>
@@ -26,7 +27,7 @@ const Testimonials: React.FC = () => {
         </div>
       </div>
 
-      <div className='block md:flex mt-14 gap-2 md:gap-12'>
+      <div className='container mt-8 mx-auto block md:flex flex-col md:flex-row justify-between'>
         <div className='w-full mb-6 sm:mb-1 md:w-1/2'>
           <Image alt="person" src={person1}/>
         </div>
@@ -34,8 +35,7 @@ const Testimonials: React.FC = () => {
           <Image alt="creative" src={person2}/>
         </div>
       </div>
-
-
+      </div>
      
     </section>
   );
