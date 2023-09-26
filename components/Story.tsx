@@ -65,10 +65,10 @@ const Explore: React.FC = () => {
   };
 
   return (
-    <section id="explore" className="story px-10 py-20">
+    <section id="explore" className="story px-5 sm:px-10 py-20">
       <div className="hero">
         <div>
-        <div className="block md:flex px-20 mb-4 gap-2 md:gap-12">
+        <div className="block md:flex px-3 sm:px-20 mb-4 gap-2 md:gap-12">
         <div className="w-full md:w-1/2">
           <p className="text-[#40B8D3] font-bold">INSTIGLAB BLOG</p>
           <p className="text-[#082630] sm:text-5xl text-4xl font-bold mt-2 mb-5">

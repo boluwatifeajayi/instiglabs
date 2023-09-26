@@ -41,25 +41,25 @@ const Header: React.FC = () => {
         <Link href="/"><Image alt="logo" src={logo}  className="mr-20" /></Link>
         
         <ul className="flex space-x-20 ml-40 inv text-sm font-bold text-[#082630]">
-          <li className="cursor-pointer hover:font-bold" onClick={() => scrollToSection('/')}>
+          <Link href="/events" className="cursor-pointer hover:font-bold">
             Events
-          </li>
+          </Link>
           <Link href="/community" className="cursor-pointer hover:font-bold">
             Community
           </Link>
           <Link className="cursor-pointer hover:font-bold" href="/blog">
             Blog
           </Link>
-          <li className="cursor-pointer hover:font-bold" onClick={() => scrollToSection('about-us')}>
-            About Us
-          </li>
+          <Link href="/about" className="cursor-pointer hover:font-bold">
+            About
+          </Link>
         </ul>
       </div>
       <div className="flex space-x-4">
        
-        <button onClick={() => scrollToSection('request-quote')} className="text-[#40B8D3] px-6 py-3 text-xs sm:text-sm  bg-[#082630] rounded-lg">
+        <Link href="/contact" className="text-[#40B8D3] px-6 py-3 text-xs sm:text-sm  bg-[#082630] rounded-lg">
           Contact Us
-        </button>
+        </Link>
       </div>
     </nav>
   );

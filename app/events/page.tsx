@@ -1,0 +1,111 @@
+'use client'
+import React from 'react';
+import Image from 'next/image';
+import Header from '@/components/Header';
+import frame1 from '../../assets/images/Frame 38515 (2).svg'
+import frame2 from '../../assets/images/Frame 38515 (1).svg'
+import frame3 from '../../assets/images/Frame 38515.svg'
+import photo1 from '../../assets/images/Group 38594 (1).png'
+import photo2 from '../../assets/images/Group 38594.png'
+import photo3 from '../../assets/images/Rectangle 4997 (1).png'
+import photo4 from '../../assets/images/Rectangle 4997 (2).png'
+import photo5 from '../../assets/images/Rectangle 4997.png'
+import Footer from '@/components/Footer';
+import cal from '../../assets/images/cal.png';
+import time from '../../assets/images/time.png';
+
+const Hero = () => {
+  
+  return (
+    <div className='text-[#082630]'>
+        <Header/>
+        <section id="hero" className='px-5 mt-48 container mx-auto justify-center hero-2 w-full'>
+      <div className='block mx-auto hero'>
+        <div className="mx-auto">
+          <div>
+            <h2 className='text-3xl sm:text-7xl text-center  font-bold text-[#082630]'>
+            Join industry experts as they share
+            their knowledge and insights on the latest
+            trends and technologies in data 
+            analytics and AI.
+            </h2>
+            
+          </div>
+          
+          
+        </div>
+        
+      </div>
+    </section>
+
+    <section id="hero" className='px-5 mt-20 hidden sm:block container mx-auto justify-center hero-2 w-full'>
+      <div className='container mx-auto flex border justify-center gap-28 py-4'>
+        <div>
+          <Image src={frame1} alt="frame"/>
+        </div>
+        <div>
+          <Image src={frame2} alt="frame"/>
+        </div>
+        <div>
+          <Image src={frame3} alt="frame"/>
+        </div>
+      </div>
+    </section>
+
+    <section id="hero" className='px-5 mt-20 container mx-auto justify-between hero-2 w-full'>
+      <div className='mx-4 sm:mx-20 py-4'>
+        <div className='mb-12'>
+          <Image src={photo1} alt="frame"/>
+          <p className='pt-2 text-lg sm:text-3xl'>Future of Architecture Summit</p>
+          <p className='pt-4'>Unlock the power of data analytics with Instig Data. Dive into a world of data-driven insights. Discover how data can drive innovation and growth in your career.</p>
+          <div className='flex mt-4 gap-3'>
+          <div className='flex gap-1'><Image src={cal} alt=""/><p>December 3, 2023</p></div>
+          <div className='flex gap-1'><Image src={time} alt=""/><p>6PM - 8PM</p></div>
+          </div>
+          
+        </div>
+        <div className='mb-12'>
+          <Image src={photo2} alt="frame"/>
+          <p className='pt-2 text-lg sm:text-3xl'>Future of Architecture Summit</p>
+          <p className='pt-4'>Unlock the power of data analytics with Instig Data. Dive into a world of data-driven insights. Discover how data can drive innovation and growth in your career.</p>
+          <div className='flex mt-4 gap-3'>
+          <div className='flex gap-1'><Image src={cal} alt=""/><p>December 3, 2023</p></div>
+          <div className='flex gap-1'><Image src={time} alt=""/><p>6PM - 8PM</p></div>
+          </div>
+        </div>
+        <div className='mb-12'>
+          <Image src={photo3} alt="frame"/>
+          <p className='pt-2 text-lg sm:text-3xl'>Future of Architecture Summit</p>
+          <p className='pt-4'>Unlock the power of data analytics with Instig Data. Dive into a world of data-driven insights. Discover how data can drive innovation and growth in your career.</p>
+          <div className='flex mt-4 gap-3'>
+          <div className='flex gap-1'><Image src={cal} alt=""/><p>December 3, 2023</p></div>
+          <div className='flex gap-1'><Image src={time} alt=""/><p>6PM - 8PM</p></div>
+          </div>
+        </div>
+        <div className='mb-12'>
+          <Image src={photo4} alt="frame"/>
+          <p className='pt-2 text-lg sm:text-3xl'>Future of Architecture Summit</p>
+          <p className='pt-4'>Unlock the power of data analytics with Instig Data. Dive into a world of data-driven insights. Discover how data can drive innovation and growth in your career.</p>
+          <div className='flex mt-4 gap-3'>
+          <div className='flex gap-1'><Image src={cal} alt=""/><p>December 3, 2023</p></div>
+          <div className='flex gap-1'><Image src={time} alt=""/><p>6PM - 8PM</p></div>
+          </div>
+        </div>
+        <div className='mb-12'>
+          <Image src={photo5} alt="frame"/>
+          <p className='pt-2 text-lg sm:text-3xl'>Future of Architecture Summit</p>
+          <p className='pt-4'>Unlock the power of data analytics with Instig Data. Dive into a world of data-driven insights. Discover how data can drive innovation and growth in your career.</p>
+          <div className='flex mt-4 gap-3'>
+          <div className='flex gap-1'><Image src={cal} alt=""/><p>December 3, 2023</p></div>
+          <div className='flex gap-1'><Image src={time} alt=""/><p>6PM - 8PM</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <Footer/>
+    </div>
+    
+  );
+};
+
+export default Hero;

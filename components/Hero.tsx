@@ -6,7 +6,7 @@ import apple from '../assets/images/apple.png';
 import Link from 'next/link';
 import play from '../assets/images/play.png';
 import country from '../assets/images/country.png';
-import phone from '../assets/images/phone-hero.svg';
+import phone from '../assets/images/per.png';
 
 const Hero = () => {
   const gradientBackground = {
@@ -30,15 +30,15 @@ const Hero = () => {
       <div className='block mx-auto hero'>
         <div className="mx-auto">
           <div>
-            <h2 className='text-4xl sm:text-7xl text-center  font-bold text-[#082630]'>
+            <h2 className='text-3xl sm:text-7xl text-center  font-bold text-[#082630]'>
             Your Gateway to <span className='text-[#40B8D3]'>Data</span>  <br/> <span className='text-[#40B8D3]'>& AI Excellence</span>
             </h2>
-            <p className='text-[#082630] text-xl text-center mt-6'>
+            <p className='text-[#082630] text-lg sm:text-xl text-center mt-6'>
             Learn and build with a community of data professionals 
-            <br/>and AI developers
+            and AI developers
             </p>
           </div>
-          <div className='flex mx-auto gap-5 justify-center mt-4 md:mt-auto'>
+          <div className='block sm:flex mx-auto gap-1 sm:gap-5 justify-center mt-4 md:mt-auto'>
             <Link href="#">
               <button className='bg-[#082630] px-8 sm:px-14  mt-8 border border-[#082630] text-[#40B8D3] rounded-lg py-3'>Contact Us</button>
             </Link>
