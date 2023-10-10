@@ -71,7 +71,7 @@ const Request: React.FC = () => {
              
 
               <button className="text-[#40B8D3] w-full px-5 py-3 text-sm font-semibold bg-[#082630] mt-2 rounded">
-                Join Our Community
+                Join Us
               </button>
             </form>
           </div>

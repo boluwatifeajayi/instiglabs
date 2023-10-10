@@ -38,12 +38,9 @@ const Hero = () => {
             and AI developers
             </p>
           </div>
-          <div className='block sm:flex mx-auto gap-1 sm:gap-5 justify-center mt-4 md:mt-auto'>
+          <div className='flex mx-auto gap-5 justify-center mt-auto'>
             <Link href="#">
-              <button className='bg-[#082630] px-8 sm:px-14  mt-8 border border-[#082630] text-[#40B8D3] rounded-lg py-3'>Contact Us</button>
-            </Link>
-            <Link href="#">
-            <button className='bg-transparent px-8 sm:px-3 mt-8 text-[#082630] border border-[#082630] rounded-lg py-3'>Subscribe To News Letter</button>
+              <button className='bg-[#082630] px-8 sm:px-14  mt-8 border border-[#082630] text-[#40B8D3] rounded-lg py-3'>Join Us</button>
             </Link>
           </div>
           

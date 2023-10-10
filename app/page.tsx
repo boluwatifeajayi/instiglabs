@@ -18,7 +18,7 @@ export default function Home() {
       <Testimonials/>
       <Story/>
       <Request/>
-      <Faq/>
+      {/* <Faq/> */}
       <Footer/>
     </main>
   )
