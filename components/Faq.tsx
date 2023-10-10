@@ -49,7 +49,7 @@ const Faq: React.FC = () => {
                   <Image src={item.isOpen ? close : plus} alt='icon' />
                 </div>
                 {item.isOpen && (
-                  <div className='pl-9 text-gray-600 pt-4'>{item.content}</div>
+                  <div className=' text-gray-600 pt-4'>{item.content}</div>
                 )}
               </div>
             ))}

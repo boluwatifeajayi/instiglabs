@@ -7,6 +7,7 @@ import pic2 from '../assets/images/pic2.png';
 import pic3 from '../assets/images/pic3.png';
 import pic4 from '../assets/images/pic4.png';
 import pic5 from '../assets/images/pic5.png';
+import Carousel from './carousel/Carousel';
 
 import { useMediaQuery } from '@react-hook/media-query';
 
@@ -82,40 +83,9 @@ const Explore: React.FC = () => {
           </p>
         </div>
       </div>
-          <div className="relative mt-10">
-            <div className={`flex gap-6 hero ${isSmallScreen ? 'carousel' : ''}`}>
-              {cards.slice(currentCard, currentCard + numberOfCardsToShow).map((card, index) => (
-                <div key={index} className="mb-6 card relative">
-                  <Image src={card.image} alt={`place${index + 1}`} />
-                  <p className="mt-3 text-xl sm:text-2xl font-bold text-blue-950">{card.title}</p>
-                  <div className="flex gap-2 mt-3">
-                    
-                    <p className="text-blue-950 text-lg">{card.date}</p>
-                  </div>
-                  <div className="flex gap-2">
-                   
-                    <p className="text-[#40B8D3] text-lg">{card.price}</p>
-                  </div>
-                </div>
-              ))}
-             
-                <div className="carousel-controls absolute top-1/2 transform -translate-y-1/2 flex justify-between w-full">
-                  <button
-                    className="prev rounded-full border ml-3 text-white p-3 px-5 absolute top-1/2 left-1 sm:left-0 transform -translate-y-1/2"
-                    onClick={handlePrev}
-                  >
-                    ←
-                  </button>
-                  <button
-                    className="next rounded-full  border mr-6 text-white p-3 px-5 absolute top-1/2 right-1 sm:right-0 transform -translate-y-1/2"
-                    onClick={handleNext}
-                  >
-                    →
-                  </button>
-                </div>
-              
-            </div>
-          </div>
+
+      <Carousel/>
+
         </div>
       </div>
     </section>

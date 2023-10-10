@@ -52,7 +52,9 @@ const Hero = () => {
           className="flex items-end"
         >
           <div className='mx-auto mt-8 justify-center'>
-            <Image className='ml-3' src={phone} alt='phone' />
+          <video autoPlay muted loop className="w-full h-auto rounded-lg">
+        <source src='/vid.mp4' type="video/mp4" />
+      </video>
           </div>
         </div>
       </div>
