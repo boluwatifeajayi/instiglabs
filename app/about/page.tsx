@@ -115,41 +115,7 @@ const Hero = () => {
             </form>
       </div>
     </section>
-    <section id="faq" className='story px-6 md:px-20 py-16'>
-      <div className='block md:flex gap-2 md:gap-32'>
-        <div className='w-full md:w-1/2'>
-          <p className='text-[#2AACC9] font-bold'>F.A.Q</p>
-          <p className='text-[#082630] sm:text-4xl text-3xl font-bold mt-2 mb-5'>
-            Frequently Asked <br />
-            Questions
-          </p>
-          <p className='text-[#082630]'>
-          At Instig Labs, we believe that knowledge knows no bounds, and we're dedicated to fostering a vibrant community of brilliant minds. 
-          </p>
-        </div>
-        <div className='w-full md:w-1/2'>
-          <div className='mt-12'>
-            {/* Accordions */}
-            {accordionItems.map((item, index) => (
-              <div key={index} className='mb-5'>
-                <div
-                  className={`cursor-pointer flex border-b font-bold pb-4 items-center text-lg justify-between ${
-                    item.isOpen ? 'text-gray-900' : 'text-gray-800'
-                  }`}
-                  onClick={() => toggleAccordion(index)}
-                >
-                  {item.title}
-                  <Image src={item.isOpen ? close : plus} alt='icon' />
-                </div>
-                {item.isOpen && (
-                  <div className='pl-9 text-gray-600 pt-4'>{item.content}</div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
+    
     <Footer/>
     </div>
   );
