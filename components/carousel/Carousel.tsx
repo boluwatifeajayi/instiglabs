@@ -87,10 +87,10 @@ const Carousel = () => {
 
 
   return (
-  <section className="banner-container">
+  <section className="banner-container container mx-auto">
   <Slider {...settings}>
     {cards.map((card, index) => (
-      <div className="individual-slides h-52" key={index}>
+      <div className="individual-slides" key={index}>
         <Image src={card.image} alt="image" className="Svg" />
         <br />
         <p className="mt-3 text-xl sm:text-xl font-bold text-blue-950">{card.title}</p>

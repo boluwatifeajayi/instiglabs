@@ -12,7 +12,7 @@ const Testimonials: React.FC = () => {
 
   return (
     <section id="testimonials" className='story mt-12 py-16 px-6 md:px-20 bg-[#082630]'>
-      <div>
+      <div className='container mx-auto'>
       <div className='container mx-auto block md:flex flex-col md:flex-row justify-between'>
         <div className='w-full md:w-1/2'>
           <p className='text-[#40B8D3] font-bold'>ABOUT INSTIG LABS</p>

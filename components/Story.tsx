@@ -66,7 +66,7 @@ const Explore: React.FC = () => {
   };
 
   return (
-    <section id="explore" className="story px-5 sm:px-10 py-20">
+    <section id="explore" className="story px-5 sm:px-10 py-20 container mx-auto">
       <div className="hero">
         <div>
         <div className="block md:flex px-3 sm:px-20 mb-4 gap-2 md:gap-12">
