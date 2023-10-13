@@ -4,7 +4,7 @@ import tick from '../assets/images/ticket.png';
 
 const Request: React.FC = () => {
   return (
-    <section id="request-quote" className="story mt-12 mx-auto justify-center py-8">
+    <section id="comm" className="story mt-12 mx-auto justify-center py-8">
       <div className="mx-auto justify-center">
         <center>
           <div className="w-full hero">

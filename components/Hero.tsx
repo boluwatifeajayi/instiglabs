@@ -1,5 +1,6 @@
 'use client'
 import React from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import apple from '../assets/images/apple.png';
@@ -25,6 +26,34 @@ const Hero = () => {
     }
   };
 
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  
+
   return (
     <section id="hero" className='px-5 mt-48 hero-2 w-full'>
       <div className='block mx-auto hero'>
@@ -39,9 +68,8 @@ const Hero = () => {
             </p>
           </div>
           <div className='flex mx-auto gap-5 justify-center mt-auto'>
-            <Link href="#">
-              <button className='bg-[#082630] px-8 sm:px-14  mt-8 border border-[#082630] text-[#40B8D3] rounded-lg py-3'>Join Us</button>
-            </Link>
+              <button onClick={() => scrollToSection('comm')} className='bg-[#082630] px-8 sm:px-14  mt-8 border border-[#082630] text-[#40B8D3] rounded-lg py-3'>Join Us</button>
+           
           </div>
           
         </div>

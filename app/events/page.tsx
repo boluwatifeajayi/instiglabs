@@ -28,7 +28,7 @@ const Hero = () => {
       <Header />
       <section
         id="hero"
-        className="px-5 mt-48 container mx-auto justify-center hero-2 w-full"
+        className="px-5 pt-48 container mx-auto justify-center hero-2 w-full"
       >
         <div className='block mx-auto hero'>
         <div className="mx-auto">
@@ -93,7 +93,7 @@ const Hero = () => {
           activeTab === 'section-A' ? 'block' : 'hidden'
         }`}
       >
-       <div className='mx-4 sm:mx-20 py-4'>
+       <div className='mx-4 sm:mx-44 py-4'>
 
         <div className='mb-12 '>
           <Image src={photo1} alt="frame"/>
